@@ -6,7 +6,7 @@ import {LfBootstrapThemeModule, LF_BOOTSTRAP_THEME_SERVICES} from '@lightweightf
 import{ LF_APP_I18N, LfCoreModule, LF_APP_SCHEMA, LF_CORE_SERVICES} from '@lightweightform/core';
 import { MobxAngularModule } from 'mobx-angular';
 import {appSchema} from './app.schema';
-
+  
 import { AppRoutingModule } from './app-routing.module';
 
 import { GuestComponent } from './components/guests/components/guest/guest.component';

@@ -14,7 +14,7 @@ import { reservationDetailsComponent } from './components/reservation-details/re
 const routes: LfRoutes = [
   
   {path: '', redirectTo: 'reservationDetails', pathMatch: 'full'},
-  {path: 'reservationDetails', component: reservationDetailsComponent},
+  {path:'reservationDetails', component: reservationDetailsComponent},
   {
     path: 'reservationDetails',
     children: [
