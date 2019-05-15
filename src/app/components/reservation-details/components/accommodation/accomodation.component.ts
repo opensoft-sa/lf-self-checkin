@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./accommodation.component.scss']
 
 })
-
 export class AccommodationComponent {
+
+ 
 }
+

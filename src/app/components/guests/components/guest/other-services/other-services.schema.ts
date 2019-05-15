@@ -1,5 +1,20 @@
-import { recordSchema} from "@lightweightform/storage";
+import { recordSchema, stringSchema, numberSchema} from "@lightweightform/storage";
 
-export const otherServicesSchema = recordSchema({
+export const otherServicesSchema = recordSchema(
+    {
+        h1Radio : stringSchema({
+           initialValue : 'N',
+        }),
 
-},{isForm: true});
+        h2Radio : stringSchema({
+            initialValue : 'N',
+        }),
+
+        h3Number : numberSchema({
+            isInteger : false,
+            isNullable : true,
+            min : 0,
+        }),
+    },{isForm: true,
+       
+    });
