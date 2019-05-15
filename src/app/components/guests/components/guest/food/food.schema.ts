@@ -11,7 +11,7 @@ export const foodSchema = recordSchema({
     totalPrice: numberSchema({
         computedValue : totalPrice(),
         isNullable : true,
-        //totalPrice is not an Integer(attribute isInteger is false)
+        isInteger : false,
     })
     
     

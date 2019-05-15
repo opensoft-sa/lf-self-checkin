@@ -48,7 +48,7 @@ export const reservationDetailsSchema = recordSchema(
       let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (!emailRegExp.test(email)) {
         return {
-          code: 'INVALID_EMAIL',
+            code: 'INVALID_EMAIL',
         }
       }
   }

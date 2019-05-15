@@ -19,6 +19,7 @@ import { AccommodationComponent } from './components/reservation-details/compone
 import { I18N_SELF_CHECK_IN_EN_US } from './app.en.US';
 
 
+
 @NgModule({
   imports: [
     BrowserModule,

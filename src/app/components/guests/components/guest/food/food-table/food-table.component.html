@@ -4,7 +4,8 @@
       <lf-table-column id = "index"></lf-table-column>
       <lf-table-column id = "date"></lf-table-column>
       <lf-table-column id = "typeOfFood"></lf-table-column>
-      <lf-table-column id = "price" [scale]="2"></lf-table-column>
+      <!--TODO CP5: select the number of decimal number using [scale] = ??-->
+      <lf-table-column id = "price"></lf-table-column>
     </lf-table-header>  
     <ng-template #lfTableRowTemplate  let-id="id" let-i="index">
       <tr lfTableRow [path]="id" >
@@ -17,4 +18,3 @@
   </lf-table>
   <lf-number [path]="subTotalName"></lf-number>
 </ng-container>
-

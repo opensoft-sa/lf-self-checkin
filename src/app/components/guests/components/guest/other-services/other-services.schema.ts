@@ -13,7 +13,6 @@ export const otherServicesSchema = recordSchema(
         }),
 
         h3Number : numberSchema({
-            isInteger : true,
             isRequired : asksForGymService,
             isNullable : true,
             min : 0,

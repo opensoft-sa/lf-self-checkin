@@ -22,16 +22,4 @@ export const FOOD_TABLE_I18N_EN_US =  LfI18n.mergeTranslations({
             {code: '3', value: 'vegan', label: 'Vegan'},
           ],
     },
-
-    '/guests/?/?/?/?/price':{
-    },
-
-    '/guests/?/?/subTotalbreakfastTable':{
-    },
-
-    '/guests/?/?/subTotallunchTable':{
-    },
-
-    '/guests/?/?/subTotaldinnerTable':{
-    },
 });
