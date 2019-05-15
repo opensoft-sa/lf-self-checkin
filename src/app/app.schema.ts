@@ -1,5 +1,9 @@
 import {recordSchema} from '@lightweightform/storage';
 
+import { guestsSchema } from './components/guests/guests.schema';
+import { reservationDetailsSchema } from './components/reservation-details/reservation-details.schema';
+
 export const appSchema = recordSchema({
-    /*TODO CP1: record the schemas of the children of the the app main schema*/
+    reservationDetails: reservationDetailsSchema,
+    guests: guestsSchema,
 });

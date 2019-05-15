@@ -9,6 +9,12 @@ import {appSchema} from './app.schema';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
+import { GuestComponent } from './components/guests/components/guest/guest.component';
+import { OtherServicesComponent } from './components/guests/components/guest/other-services/other-services.component';
+import { FoodComponent } from './components/guests/components/guest/food/food.component';
+import { FoodTableComponent } from './components/guests/components/guest/food/food-table/food-table.component';
+import { AccommodationComponent } from './components/reservation-details/components/accommodation/accomodation.component';
 import { I18N_SELF_CHECK_IN_EN_US } from './app.en.US';
 
 
@@ -22,7 +28,12 @@ import { I18N_SELF_CHECK_IN_EN_US } from './app.en.US';
   ],
   declarations: [
     AppComponent,
-    /*TODO CP1: add all the components you have created to the declarations vector*/
+    GuestComponent,
+    OtherServicesComponent,
+    FoodTableComponent,
+    FoodComponent,
+    AccommodationComponent,
+    reservationDetailsComponent,
   ],
   providers: [
     {provide: LF_APP_SCHEMA, useValue: appSchema},

@@ -11,7 +11,6 @@ export class AppComponent {
   constructor(
     public lfStorage: LfStorage,
     public lfI18n: LfI18n,
-
   ) {}
 
 }
