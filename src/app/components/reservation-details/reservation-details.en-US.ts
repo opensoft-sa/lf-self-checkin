@@ -11,30 +11,31 @@ export const RESERVATION_DETAILS_I18N_EN_US = LfI18n.mergeTranslations({
     '/reservationDetails/email': {
       code : "1.1",
       [I18N_VALUE_LABEL_KEY]: "E-mail",
-      /*TODO CP3:  create the internacionalization error message*/
+      validations: {
+        INVALID_EMAIL: 'The E-mail is invalid.',
+      },
     },
 
     '/reservationDetails/phoneNumber': {
       code : "1.2",
-      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]:"",
+      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: "",
       [I18N_VALUE_LABEL_KEY]: "Phone Number",
     },
 
     '/reservationDetails/checkInOut': {
       code : "1.3",
-      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]:"",
       [I18N_VALUE_LABEL_KEY]: "Check-In/Check-Out",
     },
 
     '/reservationDetails/hourOfArrival': {
       code : "1.4",
-      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]:"",
+      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: "",
       [I18N_VALUE_LABEL_KEY]: "Hour of Arrival",
     },
 
     '/reservationDetails/flightNumber': {
       code : "1.5",
-      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]:"",
+      [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: "",
       [I18N_VALUE_LABEL_KEY]: "Flight Number",
     },
 });

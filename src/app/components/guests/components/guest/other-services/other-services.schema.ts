@@ -1,4 +1,5 @@
 import { recordSchema, stringSchema, numberSchema} from "@lightweightform/storage";
+import { LfStorage } from "@lightweightform/core";
 
 export const otherServicesSchema = recordSchema(
     {
@@ -11,7 +12,7 @@ export const otherServicesSchema = recordSchema(
         }),
 
         h3Number : numberSchema({
-            /*TODO CP3: make this field required if the h2Radio select value == Y*/
+            isRequired : asksForGymService,
             isNullable : true,
             min : 0,
         }),
@@ -19,7 +20,12 @@ export const otherServicesSchema = recordSchema(
        
     });
 
-    /*function asksForGymService(ctx: LfStorage): boolean{
-        /*TODO CP3: to get a element use the method ctx.get('elemName')
-        return false;
-    }*/
+    function asksForGymService(ctx: LfStorage): boolean{
+        const gymService = ctx.get('h2Radio');
+       
+        if(gymService == 'Y')
+            return true;
+        else
+            return false;
+
+    }

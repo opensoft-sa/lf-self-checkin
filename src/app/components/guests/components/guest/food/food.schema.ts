@@ -9,13 +9,13 @@ export const foodSchema = recordSchema({
         textBox : true,
     }),
     totalPrice: numberSchema({
-        computedValue : totalPrice(),
+        computedValue : calcPrice(),
         isNullable : true,
         isInteger : false,
-    })
+    }),
 }, {isForm: true,
     });
 
-function totalPrice() {
+function calcPrice() {
     return () => {return 0};
 }

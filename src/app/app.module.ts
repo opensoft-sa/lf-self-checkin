@@ -10,13 +10,13 @@ import {appSchema} from './app.schema';
   
 import { AppRoutingModule } from './app-routing.module';
 
+import { reservationDetailsComponent } from './components/reservation-details/reservation-detail.component';
 import { GuestComponent } from './components/guests/components/guest/guest.component';
 import { OtherServicesComponent } from './components/guests/components/guest/other-services/other-services.component';
 import { FoodComponent } from './components/guests/components/guest/food/food.component';
 import { FoodTableComponent } from './components/guests/components/guest/food/food-table/food-table.component';
 import { AccommodationComponent } from './components/reservation-details/components/accommodation/accomodation.component';
 import { I18N_SELF_CHECK_IN_EN_US } from './app.en.US';
-import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
 
 
 @NgModule({

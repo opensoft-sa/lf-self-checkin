@@ -16,5 +16,4 @@ export const FOOD_I18N_EN_US =  LfI18n.mergeTranslations({
     '/guests/?/food/totalPrice':{
         legend : "Total Price",
     } 
-    
 });

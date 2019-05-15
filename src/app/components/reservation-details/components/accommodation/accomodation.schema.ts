@@ -2,6 +2,7 @@ import { recordSchema, stringSchema, tableSchema, booleanSchema} from "@lightwei
 
 export const accomodationSchema  = recordSchema({
   accomodationsTable: tableSchema(
+
     recordSchema({
         name : stringSchema({
             isRequired : true,

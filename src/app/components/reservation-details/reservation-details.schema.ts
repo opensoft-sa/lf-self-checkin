@@ -1,39 +1,38 @@
-import { recordSchema, stringSchema, numberSchema } from "@lightweightform/storage";
+import { recordSchema, stringSchema, numberSchema, ValidationIssue } from "@lightweightform/storage";
 import { dateRangeSchema} from "@lightweightform/bootstrap-theme";
+import { LfStorage } from "@lightweightform/core";
 import { accomodationSchema } from "./components/accommodation/accomodation.schema";
 
 export const reservationDetailsSchema = recordSchema(
    {
    email: stringSchema({
+      validate: emailValidator,
       
    }),
 
    phoneNumber: numberSchema({
-      /*TODO CP3: create a restriction where the phone number
-      * needs to have at least 9 digits */
       isInteger : true,
       isRequired : true,
       isNullable : true,
+      min: 100000000,
    }),
    
 
    checkInOut: dateRangeSchema({
-      /*TODO CP3: create a restriction where the birthDate has to be in the past
-       *Tip: use new Date() to get the current date of the system*/
+      minDate : new Date(),
       isRequired : true,
       isNullable : true,
    }),
 
    hourOfArrival: numberSchema({
-      /*TODO CP3: create a restriction where the hour of arrival
-      * needs to be between 0 and 23 */
+      min: 0,
+      max:23,
       Required : true,
       isNullable : true,
    }),
 
    flightNumber: numberSchema({
-      /*TODO CP3: create a restriction where the hour of arrival
-      * needs have less than 7 digits*/
+      max : 1000000,
       Required : true,
       isNullable : true,
    }),
@@ -44,5 +43,16 @@ export const reservationDetailsSchema = recordSchema(
    {isForm:true,
 });
 
+ function emailValidator(ctx: LfStorage): ValidationIssue | undefined{    
+      const email = ctx.get()
+      let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (!emailRegExp.test(email)) {
+        return {
+          code: 'Email is invalid'/*'INVALID_EMAIL'*/,
+          message:
+            'Email is invalid',
+        }
+      }
+  }
 
 
