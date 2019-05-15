@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 
 })
 export class AccommodationComponent {
-}
 
-export function getOptionsTypeRoom(){
 }

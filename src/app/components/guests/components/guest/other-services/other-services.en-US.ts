@@ -25,7 +25,13 @@ export const OTHER_SERVICES_I18N_EN_US = LfI18n.mergeTranslations({
     '/guests/?/otherServices/h3Number':{
         [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : "",
         [I18N_VALUE_LABEL_KEY]: 'Days With Personal Trainer',
-    },     
-    /*TODO CP4: create totalGymPrice EN-US*/
+    }, 
+
+    '/guests/?/otherServices/h4ComputedNumber':{
+        [I18N_VALUE_LABEL_KEY]: 'Total Price',
+        isDisabled : true,
+        legend : "Total Price",
+    }, 
+    
 });
 

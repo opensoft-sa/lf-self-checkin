@@ -34,5 +34,4 @@ export const FOOD_TABLE_I18N_EN_US =  LfI18n.mergeTranslations({
 
     '/guests/?/?/subTotaldinnerTable':{
     },
-
 });

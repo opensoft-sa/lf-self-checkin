@@ -1,4 +1,4 @@
-import { recordSchema, stringSchema, dateSchema, tableSchema, numberSchema } from "@lightweightform/storage";
+import { recordSchema, stringSchema, dateSchema, numberSchema, tableSchema } from "@lightweightform/storage";
 
 export const foodTableSchema : ((string) => object) = path => {
     return {
@@ -16,25 +16,22 @@ export const foodTableSchema : ((string) => object) = path => {
                 }),
                 price : numberSchema({
                     isInteger : false,
-                    /*TODO CP4:add a computed value atribute add associate a function
-                     * that given a food type calculates the price */
+                    computedValue: computedPrice(),
                     isNullable: true,
                     isClientOnly: false
                 }),
             })
         ),
-        /*TODO CP4: add a computed value atribute add associate a function
-         * that given a meal (dinner, breakfast or lunch)
-         * calculates the subTotal price*/
         [`subTotal${path}`] : numberSchema({
           isInteger : false,
+          computedValue: subTotal(path),
           isNullable: true,
           isClientOnly: false
       }),
     }
 }
 
-/*function computedPrice() {
+function computedPrice() {
     return ctx => {
       let price;
       switch (ctx.get('typeOfFood')) {
@@ -53,9 +50,9 @@ export const foodTableSchema : ((string) => object) = path => {
       }
       return price;
     };
-  }*/
+  }
 
-  /*function subTotal(path: string){
+  function subTotal(path: string){
     return ctx => {
       if (ctx.get(path).length > 0) {
         return ctx
@@ -65,4 +62,5 @@ export const foodTableSchema : ((string) => object) = path => {
       }
       return 0;
     }
-  }*/
+  }
+

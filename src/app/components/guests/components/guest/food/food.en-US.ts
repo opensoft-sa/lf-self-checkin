@@ -12,5 +12,8 @@ export const FOOD_I18N_EN_US =  LfI18n.mergeTranslations({
    '/guests/?/food/comments':{
         [I18N_VALUE_LABEL_KEY]: "Do you have additional comments? (allergies, food preferences, ...)",
     },
-    
+
+    '/guests/?/food/totalPrice':{
+        legend : "Total Price",
+    }  
 });

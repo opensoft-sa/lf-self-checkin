@@ -11,6 +11,9 @@ export const RESERVATION_DETAILS_I18N_EN_US = LfI18n.mergeTranslations({
     '/reservationDetails/email': {
       code : "1.1",
       [I18N_VALUE_LABEL_KEY]: "E-mail",
+      validations: {
+        INVALID_EMAIL: 'The E-mail is invalid.',
+      },
     },
 
     '/reservationDetails/phoneNumber': {

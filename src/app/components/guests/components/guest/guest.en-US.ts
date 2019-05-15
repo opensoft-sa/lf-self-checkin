@@ -31,7 +31,7 @@ export const GUEST_I18N_EN_US = LfI18n.mergeTranslations({
     },
 
     '/guests/?/phoneNumber':{
-        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : "",
+        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: "",
         [I18N_VALUE_LABEL_KEY]: 'Phone Number',
     },
 });

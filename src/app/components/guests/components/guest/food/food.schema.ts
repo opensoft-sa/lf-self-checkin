@@ -11,14 +11,12 @@ export const foodSchema = recordSchema({
     totalPrice: numberSchema({
         computedValue : totalPrice(),
         isNullable : true,
+        //totalPrice is not an Integer(attribute isInteger is false)
     })
-
-    /*TODO CP4: add a computed value atribute add associate a function
-    * that given a meal (dinner, breakfast and lunch)
-    * calculates the Total price*/   
+    
+    
 }, {isForm: true,
     });
-
 
     
 function sumPrices(arr: any[]): number {
