@@ -47,6 +47,13 @@ export class AppComponent {
       callback: () => this.lfApp.validate(),
     },
     {
+      id: 'language',
+      style: 'outline-success',
+      icon: 'language',
+      options: this.lfI18n.languages.map(lang => ({id: lang, value: lang})),
+      callback: lang => this.lfI18n.setCurrentLanguage(lang),
+    },
+    {
       id: 'submit',
       text: "Submit",
       style: "outline-success",
@@ -65,10 +72,8 @@ export class AppComponent {
     private lfFileStorage: LfFileStorage,
   ) {}
 
-
   submit() {
     if (!this.lfStorage.hasErrors()) {
-      console.log(this.lfStorage.shouldShowError());
       fetch("https://selfcheckin.opensoft.pt/reservations", {
         method: "POST",
         headers: {

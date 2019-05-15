@@ -8,10 +8,10 @@ export const guestSchema  = recordSchema({
     name: stringSchema({
     }),
     birthDate: dateSchema({
-        validate: has18PlusYears,
+        maxDate: new Date(),
         isRequired : true,
         isNullable : true,
-        
+        validate: has18PlusYears,
     }),
     email: stringSchema({
         validate: emailValidator,
@@ -21,7 +21,7 @@ export const guestSchema  = recordSchema({
         min : 100000000,
     }),
     food: foodSchema, 
-    otherServices : otherServicesSchema,
+    otherServices : otherServicesSchema,   
 }, {isForm:true,
 })
 
@@ -30,9 +30,9 @@ function emailValidator(ctx: LfStorage): ValidationIssue | undefined{
     let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     emailRegExp.test(email);
     if (!emailRegExp.test(email)) {
-      return {
-        code: 'INVALID_EMAIL',
-      }
+        return {
+            code: 'INVALID_EMAIL',
+        }
     }
 }
 

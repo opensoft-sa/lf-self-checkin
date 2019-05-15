@@ -7,15 +7,16 @@ import{ LF_APP_I18N, LfCoreModule, LF_APP_SCHEMA, LF_CORE_SERVICES} from '@light
 import { MobxAngularModule } from 'mobx-angular';
 import {appSchema} from './app.schema';
 
+  
 import { AppRoutingModule } from './app-routing.module';
 
+import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
 import { GuestComponent } from './components/guests/components/guest/guest.component';
 import { OtherServicesComponent } from './components/guests/components/guest/other-services/other-services.component';
 import { FoodComponent } from './components/guests/components/guest/food/food.component';
 import { FoodTableComponent } from './components/guests/components/guest/food/food-table/food-table.component';
 import { AccommodationComponent } from './components/reservation-details/components/accommodation/accomodation.component';
 import { I18N_SELF_CHECK_IN_EN_US } from './app.en.US';
-import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
 
 
 @NgModule({
@@ -36,8 +37,9 @@ import { reservationDetailsComponent } from './components/reservation-details/re
     reservationDetailsComponent,
   ],
   providers: [
-    {provide: LF_APP_SCHEMA, useValue: appSchema},
-    {provide: LF_APP_I18N, useValue: {'en-US' : I18N_SELF_CHECK_IN_EN_US}},
+    {provide: LF_APP_SCHEMA, useValue: appSchema}, 
+    /*TODO CP7: insert self check in portuguese version*/
+    {provide: LF_APP_I18N, useValue: {'en-US' : I18N_SELF_CHECK_IN_EN_US,}},
     LF_CORE_SERVICES,
     LF_BOOTSTRAP_THEME_SERVICES,
   ],
