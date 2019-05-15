@@ -15,7 +15,7 @@ const routes: LfRoutes = [
   {path: '', redirectTo: 'reservationDetails', pathMatch: 'full'},
   {path: 'reservationDetails', component: reservationDetailsComponent},
   {
-    path:'reservationDetails',
+    path: 'reservationDetails',
     children: [
       {path: 'accomodation', component: AccommodationComponent},
     ],

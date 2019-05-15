@@ -8,11 +8,12 @@ import { GUEST_I18N_EN_US } from './components/guests/components/guest/guest.en-
 import { GUESTS_I18N_EN_US } from './components/guests/guests.en-US';
 import { RESERVATION_DETAILS_I18N_EN_US } from './components/reservation-details/reservation-details.en-US';
 
+
 export const SOME_ERROR_OCCURRED_KEY = 'someErrorOccured';
 
 export const I18N_SELF_CHECK_IN_EN_US = LfI18n.mergeTranslations(
   I18N_EN_US,
-  FOOD_TABLE_I18N_EN_US,
+   FOOD_TABLE_I18N_EN_US,
   GUESTS_I18N_EN_US,
   RESERVATION_DETAILS_I18N_EN_US,
   ACCOMODATION_I18N_EN_US,
@@ -34,7 +35,7 @@ export const I18N_SELF_CHECK_IN_EN_US = LfI18n.mergeTranslations(
     actionsMenuOptions: {
       language: {
         'en-US': 'English',
-        //TODO CP7:insert portuguese option label
+        'pt-PT': 'Portuguese',
       },
     },
     },

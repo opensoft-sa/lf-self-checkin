@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'sc-accommodation',
   templateUrl: './accomodation.component.html',
   styleUrls: ['./accommodation.component.scss']
-
 })
+
 export class AccommodationComponent {
 }
