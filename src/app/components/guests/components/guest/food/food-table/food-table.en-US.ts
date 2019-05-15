@@ -1,4 +1,5 @@
 import{LfI18n} from "@lightweightform/core";
+import { I18N_NUMBER_THOUSANDS_SEPARATOR_KEY } from "@lightweightform/bootstrap-theme";
 
 const myColumnLabels = {
     index: "#",
@@ -21,5 +22,27 @@ export const FOOD_TABLE_I18N_EN_US =  LfI18n.mergeTranslations({
             {code: '2', value: 'fish', label: 'Fish'},
             {code: '3', value: 'vegan', label: 'Vegan'},
           ],
+    },
+
+    '/guests/?/?/?/?/price':{
+        decimalSeparator : ",",
+        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : ".",
+        suffix : " $",
+    },
+
+    '/guests/?/?/subTotalbreakfastTable':{
+        decimalSeparator : ',',
+        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : ".",
+        suffix : " $",
+    },
+    '/guests/?/?/subTotallunchTable':{
+        decimalSeparator : ',',
+        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : ".",
+        suffix : " $",
+    },
+    '/guests/?/?/subTotaldinnerTable':{
+        decimalSeparator : ',',
+        [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY] : ".",
+        suffix : " $",
     },
 });

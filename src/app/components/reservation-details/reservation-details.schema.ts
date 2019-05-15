@@ -37,20 +37,18 @@ export const reservationDetailsSchema = recordSchema(
       isNullable : true,
    }),
    
- 
+
    accomodation : accomodationSchema,
    },
    {isForm:true,
 });
 
- function emailValidator(ctx: LfStorage): ValidationIssue | undefined{    
-      const email = ctx.get()
-      let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (!emailRegExp.test(email)) {
-        return {
-            code: 'INVALID_EMAIL',
-        }
-      }
-  }
-
-
+function emailValidator(ctx: LfStorage): ValidationIssue | undefined{    
+   const email = ctx.get()
+   let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   if (!emailRegExp.test(email)) {
+     return {
+       code: 'INVALID_EMAIL',
+     }
+   }
+}
