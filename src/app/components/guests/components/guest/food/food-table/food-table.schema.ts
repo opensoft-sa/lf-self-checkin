@@ -7,6 +7,7 @@ export const foodTableSchema : ((string) => object) = path => {
                 index : stringSchema({
                 }),
                 date : dateSchema({
+                    minDate : new Date(),
                     isNullable: true,
                 }),
                 typeOfFood : stringSchema({
