@@ -10,7 +10,7 @@ import {appSchema} from './app.schema';
   
 import { AppRoutingModule } from './app-routing.module';
 
-import { reservationDetailsComponent } from './components/reservation-details/reservation-detail.component';
+import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
 import { GuestComponent } from './components/guests/components/guest/guest.component';
 import { OtherServicesComponent } from './components/guests/components/guest/other-services/other-services.component';
 import { FoodComponent } from './components/guests/components/guest/food/food.component';

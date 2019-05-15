@@ -9,13 +9,37 @@ export const foodSchema = recordSchema({
         textBox : true,
     }),
     totalPrice: numberSchema({
-        computedValue : calcPrice(),
+        computedValue : totalPrice(),
         isNullable : true,
-        isInteger : false,
-    }),
+    })
+
+    /*TODO CP4: add a computed value atribute add associate a function
+    * that given a meal (dinner, breakfast and lunch)
+    * calculates the Total price*/   
 }, {isForm: true,
     });
 
-function calcPrice() {
-    return () => {return 0};
+
+    
+function sumPrices(arr: any[]): number {
+    if (arr === null) {
+      return 0;
+    }
+
+    let sum = 0;
+    for (const l of arr) {
+      sum += l.price;
+    }
+    return sum;
+}
+
+function totalPrice() {
+    return ctx => {
+      const food = ctx.get();
+      return (
+        sumPrices(food.breakfastTable) +
+        sumPrices(food.lunchTable) +
+        sumPrices(food.dinnerTable)
+      );
+    };
 }

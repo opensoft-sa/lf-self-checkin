@@ -16,6 +16,8 @@ export const otherServicesSchema = recordSchema(
             isNullable : true,
             min : 0,
         }),
+
+        /*TODO CP4: create GYmTotalPrice schema*/
     },{isForm: true,
        
     });

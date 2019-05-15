@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {LfRoutes, LF_ROUTER_BASE_PATH} from '@lightweightform/core';
 
-import { reservationDetailsComponent } from './components/reservation-details/reservation-detail.component';
+import { reservationDetailsComponent } from './components/reservation-details/reservation-details.component';
 import { FoodComponent } from './components/guests/components/guest/food/food.component';
 import { OtherServicesComponent } from './components/guests/components/guest/other-services/other-services.component';
 import { GuestComponent } from './components/guests/components/guest/guest.component';
