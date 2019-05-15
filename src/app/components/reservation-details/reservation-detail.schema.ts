@@ -1,4 +1,5 @@
 import { recordSchema, stringSchema, numberSchema } from "@lightweightform/storage";
+import { dateRangeSchema} from "@lightweightform/bootstrap-theme";
 import { accomodationSchema } from "./components/accommodation/accomodation.schema";
 
 export const reservationDetailsSchema = recordSchema(
@@ -13,12 +14,24 @@ export const reservationDetailsSchema = recordSchema(
       isNullable : true,
    }),
    
-   /*TODO CP2: follow the example given above and create schemas
-    *for all the elements you created in the html*/
 
-    /*Note: You can have a schema you have created inside anothe schema*/
-     accomodation : accomodationSchema
+   checkInOut: dateRangeSchema({
+      isRequired : true,
+      isNullable : true,
+   }),
 
+   hourOfArrival: numberSchema({
+      Required : true,
+      isNullable : true,
+   }),
+
+   flightNumber: numberSchema({
+      Required : true,
+      isNullable : true,
+   }),
+   
+ 
+   accomodation : accomodationSchema,
    },
    {isForm:true,
 });

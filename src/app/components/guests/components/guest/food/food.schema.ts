@@ -1,4 +1,4 @@
-import { recordSchema, stringSchema } from "@lightweightform/storage";
+import { recordSchema, stringSchema, numberSchema } from "@lightweightform/storage";
 import { foodTableSchema } from "./food-table/food-table.schema";
 
 export const foodSchema = recordSchema({
@@ -8,6 +8,14 @@ export const foodSchema = recordSchema({
     comments : stringSchema({
         textBox : true,
     }),
-    /*TODO CP2: create a numberSchema for the totalPrice*/
+    totalPrice: numberSchema({
+        computedValue : totalPrice(),
+        isNullable : true,
+        isInteger : false,
+    })
 }, {isForm: true,
     });
+
+function totalPrice() {
+    return () => {return 0};
+}

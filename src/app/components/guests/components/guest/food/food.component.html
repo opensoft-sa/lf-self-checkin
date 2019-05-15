@@ -1,6 +1,12 @@
 <lf-form path="guests/{{index}}/food">
-  
-  <!--TODO CP2: Let's add a table for each meal: Breakfast, Lunch, and Dinner! -->
-  <lf-textarea path="comments"></lf-textarea>
-  <!--TODO CP2: Let's create a totalCost lf-number that we will use in the future capters-->
+  <br>
+    <sc-food-table #breakfastTable path="breakfastTable"></sc-food-table>
+  <br>
+    <sc-food-table #lunchTable path="lunchTable"></sc-food-table>
+  <br>
+    <sc-food-table #dinnerTable path="dinnerTable"></sc-food-table>
+  <br>
+    <lf-textarea path="comments"></lf-textarea>
+  <br>
+    <lf-number path = "totalPrice"></lf-number>
 </lf-form>
