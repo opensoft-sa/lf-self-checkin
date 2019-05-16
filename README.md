@@ -55,7 +55,7 @@ This guide is divided in six checkpoints:
 _**Goal:** Define the structure of the application_
 
 1.  Start the application executing the command `ng serve cp1-begin`
-or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint1/cp1-begin" target="_blank">StackBlitz-CP1-Begin</a>
+or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp1-begin" target="_blank">StackBlitz-CP1-Begin</a>
 
 2.  Define the application's title ("LF Self check-in app")
 3.	Define the application title and base root in the index.html file:
@@ -268,13 +268,13 @@ and put it inside the reservation-detail.schema
 			...
 		});
     	
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint1/cp1-end" target="_blank"> here </a>, but try to do it by your own :)
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp1-end"  target="_blank"> here </a>, but try to do it by yourself :)
 
 ### Checkpoint #2
 
 _**Goal:** Fill the form components with LF fields_
 
-1.  Start the application executing the command `ng serve cp2-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint2/cp2-begin" target="_blank">StackBlitz-CP2-Begin</a>
+1.  Start the application executing the command `ng serve cp2-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp2-begin"  target="_blank">StackBlitz-CP2-Begin</a>
 2.  Add the fields below to reservation-detail component:
 
 	All the display features are realized in the en-US files and the logic restrictions and input processment are declared in the schema,
@@ -337,13 +337,13 @@ _**Goal:** Fill the form components with LF fields_
 		...
 		})
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint2/cp2-end" target="_blank"> here </a>
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp2-end"  target="_blank"> here </a>
 
 ### Checkpoint #3
 
 _**Goal:** Implement schema specifications for the LF fields_
 
-1.  Start the application executing the command `ng serve cp3-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint3/cp3-begin" target="_blank">StackBlitz-CP3-Begin</a>.
+1.  Start the application executing the command `ng serve cp3-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp3-begin"  target="_blank">StackBlitz-CP3-Begin</a>.
 2.  Add a minimum of 18 years old schema specification to the "birthDate" field on the guest component
 
     	/* guest.schema.ts */
@@ -407,13 +407,13 @@ _**Goal:** Implement schema specifications for the LF fields_
 		...
 	Tip: Create a function that checks if the personal trainer radio is set to Y
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint3/cp3-end" target="_blank"> here </a>.
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp3-end"  target="_blank"> here </a>.
 
 ### Checkpoint #4
 
 _**Goal:** Implement LF fields with computed values_
 
-1.  Start the application executing the command `ng serve cp4-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint4/cp4-begin" target="_blank">StackBlitz-CP4-Begin</a>.
+1.  Start the application executing the command `ng serve cp4-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp4-begin"  target="_blank">StackBlitz-CP4-Begin</a>.
 2.  Notice the existing function "computedPrice" in the "foodTable" component
 3.  Make the value of the field "price" of "foodTable" depend on the "typeFood" field value, using the "computedPrice" function
 
@@ -461,13 +461,13 @@ _**Goal:** Implement LF fields with computed values_
 
 6.  Set the field "totalPrice" of "food" as computed, using the existing "totalPrice" function.
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint4/cp4-end" target="_blank"> here </a>.
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp4-end"  target="_blank"> here </a>.
 
 ### Checkpoint #5
 
 _**Goal:** Customize values display_
 
-1.  Start the application executing the command `ng serve cp5-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint5/cp5-begin" target="_blank">StackBlitz-CP5-Begin</a>.
+1.  Start the application executing the command `ng serve cp5-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp5-begin" target="_blank">StackBlitz-CP5-Begin</a>.
 
 2.  Let's format the computed values to make our self check-in application look better
 
@@ -500,13 +500,13 @@ _**Goal:** Customize values display_
 4.  Add the same fields to "price" in "food-table"
 
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint5/cp5-end" target="_blank"> here </a>.
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp5-end"  target="_blank"> here </a>.
 
 ### Checkpoint #6
 
 _**Goal:** Add form's actions to the LF application_
 
-1.  Start the application executing the command `ng serve cp6-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint6/cp6-begin" target="_blank">StackBlitz-CP6-Begin</a>.
+1.  Start the application executing the command `ng serve cp6-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp6-begin" target="_blank">StackBlitz-CP6-Begin</a>.
 2.  Understand how to add actions, such as load, save and submit to the self check-in application
 3.  Add a save action to save the form content to a file, making the modifications below:
 
@@ -578,7 +578,7 @@ _**Goal:** Add form's actions to the LF application_
       	}
     	...
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint6/cp6-end" target="_blank"> here </a>.
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp6-end" target="_blank"> here </a>.
 
 ### Checkpoint #7
 
@@ -587,7 +587,7 @@ _**Goal:** Add form's language options to the LF application_
 In this demonstration we choose to use the Portugues language as an example, but you can do it for every language.
 We also separated the .pt-Pt and .en-Us for each component for a  simple comprehension but we can have everything in a single file. 
 
-1. Start the application executing the command `ng serve cp7-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint7/cp7-begin" target="_blank">StackBlitz-CP7-Begin</a>.
+1. Start the application executing the command `ng serve cp7-begin` or if you are using  StackBlitz go to following link: <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp7-begin" target="_blank">StackBlitz-CP7-Begin</a>.
 2. Start by adding a new language provider in the app.module.ts
 
 		...
@@ -619,4 +619,4 @@ We also separated the .pt-Pt and .en-Us for each component for a  simple compreh
 4. Now you need to fill all the .pt-PT.ts files similiar to the .en-US that are all made in the checkpoint,
 5. We suggest you copy the .en-US.ts file to the correspondent .pt-Pt.ts file and translate all the labels.
 
-If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/PGSilvaOpensoft/StackBlitz_Self_CheckIn/tree/master/checkpoint7/cp7-end" target="_blank"> here </a>.
+If you are using the StackBlitz version you can check the final solution <a href="https://stackblitz.com/github/opensoft-sa/lf-self-checkin/tree/cp7-end" target="_blank"> here </a>.
