@@ -1,3 +1,5 @@
+@echo off
+
 set /A numCapters = 7
 set /A counter = %1
 set /A inicialCounter = %1
@@ -18,7 +20,6 @@ set stage=end ) else (
 set stage=begin
 set /A counter = %counter%+1 )
 
-git branch cp%counter%-%stage%
 
 git checkout cp%oldCounter%-%oldStage%
 
