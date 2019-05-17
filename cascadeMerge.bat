@@ -6,7 +6,7 @@ set /A inicialCounter = %1
 set stage=%2
 set inicialState=%2
 
-cd OpenSoft-GitHub-Self-CheckIn
+cd %4
 
 git checkout cp%counter%-%stage%
 
@@ -27,7 +27,13 @@ git checkout cp%counter%-%stage%
 
 git pull origin cp%counter%-%stage%
 
-git merge -X theirs cp%oldCounter%-%oldStage% 
+git merge --no-ff --no-commit -X theirs cp%oldCounter%-%oldStage% 
+
+git reset HEAD README.md
+
+git checkout -- README.md
+
+git commit -m %3
 
 git push origin cp%counter%-%stage%
 
