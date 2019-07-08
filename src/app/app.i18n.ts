@@ -30,5 +30,15 @@ export const APP_I18N: Record<string, any> = {
     FOOD_TABLE_I18N_EN_US,
   ),
 
-  /*TODO:CP7: Declare all the elements in from PT_PT delarion with a 'pt-Pt' attribute*/
+  'pt-PT': LfI18n.mergeTranslations(
+    I18N_PT_PT,
+    I18N_SELF_CHECK_IN_PT_PT,
+    GUEST_I18N_PT_PT,
+    GUESTS_I18N_PT_PT,
+    RESERVATION_DETAILS_I18N_PT_PT,
+    ACCOMODATION_I18N_PT_PT,
+    FOOD_I18N_PT_PT,
+    OTHER_SERVICES_I18N_PT_PT,
+    FOOD_TABLE_I18N_PT_PT,
+  ),
 };
