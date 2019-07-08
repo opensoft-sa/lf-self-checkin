@@ -4,6 +4,7 @@ import {
   I18N_VALUE_LABEL_KEY,
 } from '@lightweightform/bootstrap-theme';
 
+
 export const RESERVATION_DETAILS_I18N_PT_PT = LfI18n.mergeTranslations({
   '/reservationDetails': {
     [I18N_VALUE_LABEL_KEY]: 'Detalhes da Reserva',
@@ -13,20 +14,20 @@ export const RESERVATION_DETAILS_I18N_PT_PT = LfI18n.mergeTranslations({
     code: '1.1',
     [I18N_VALUE_LABEL_KEY]: 'E-mail',
     validations: {
-      INVALID_EMAIL: 'O E-mail inserido nÃ£o esta correto.',
+      INVALID_EMAIL: 'O E-mail inserido não esta correto.',
     },
   },
 
   '/reservationDetails/phoneNumber': {
     [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: '',
     code: '1.2',
-    [I18N_VALUE_LABEL_KEY]: 'Contacto TelefÃ³nico',
+    [I18N_VALUE_LABEL_KEY]: 'Contacto Telefónico',
     minSize: 9,
   },
 
   '/reservationDetails/checkInOut': {
     code: '1.3',
-    [I18N_VALUE_LABEL_KEY]: 'Entrada/SaÃ­da',
+    [I18N_VALUE_LABEL_KEY]: 'Entrada/Saída',
   },
 
   '/reservationDetails/hourOfArrival': {
@@ -38,6 +39,6 @@ export const RESERVATION_DETAILS_I18N_PT_PT = LfI18n.mergeTranslations({
   '/reservationDetails/flightNumber': {
     [I18N_NUMBER_THOUSANDS_SEPARATOR_KEY]: '',
     code: '1.5',
-    [I18N_VALUE_LABEL_KEY]: 'NÃºmero do Voo',
+    [I18N_VALUE_LABEL_KEY]: 'Número do Voo',
   },
 });
