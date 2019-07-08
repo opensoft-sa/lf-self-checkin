@@ -1,29 +1,20 @@
 import {Component, ViewChild} from '@angular/core';
-import {LfFileStorage, LfStorage, LfI18n} from '@lightweightform/core';
+import {LfStorage, LfI18n, LfFileStorage} from '@lightweightform/core';
 import {AppComponent as LfAppComponent} from '@lightweightform/bootstrap-theme';
 
 @Component({
   selector: 'sc-root',
   templateUrl: './app.component.html',
-  styleUrls: ["./app.component.scss"],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
   actions = [
     {
       id: 'save',
       style: 'outline-secondary',
       icon: 'save',
-      callback: async () => {
-        const dateStr = new Date().toISOString().replace(/:|\./g, '-');
-        const fileName = `census-${dateStr}.json`;
-        try {
-          await this.lfStorage.saveToFile('/', fileName);
-          console.log('Value saved successfully');
-          this.lfStorage.setPristine('/');
-        } catch (err) {
-          console.error('Error saving file:', err);
-        }
+      callback: () => {
+        alert('save not implemented'); //TODO CP6: Implement save action
       },
     },
     {
@@ -31,29 +22,23 @@ export class AppComponent {
       style: 'outline-secondary',
       icon: 'folder-open',
       isDisabled: !this.lfFileStorage.loadIsSupported,
-      callback: async () => {
-        try {
-          await this.lfStorage.loadFromFile('/');
-          console.log('Value loaded successfully');
-        } catch (err) {
-          console.error('Error loading file:', err);
-        }
+      callback: () => {
+        alert('load not implemented'); //TODO CP6: Implement load action
       },
     },
     {
       id: 'validate',
       style: 'outline-danger',
       icon: 'check-square-o',
-      callback: () => this.lfApp.validate(),
+      callback: () => alert('validate not implemented'), //TODO CP6: Implement validate action
     },
     {
-      id: 'submit',
-      text: "Submit",
-      style: "outline-success",
-      icon: "send",
+      text: 'Submit',
+      style: 'outline-success',
+      icon: 'send',
       callback: () => {
-        this.submit();
-      }
+        alert('submit not implemented'); //TODO CP6: Implement submit action
+      },
     },
   ];
 
@@ -65,21 +50,20 @@ export class AppComponent {
     private lfFileStorage: LfFileStorage,
   ) {}
 
-
   submit() {
-    if (!this.lfStorage.hasErrors()) {
+    if (this.lfStorage.shouldShowError()) {
       console.log(this.lfStorage.shouldShowError());
-      fetch("https://selfcheckin.opensoft.pt/reservations", {
-        method: "POST",
+      fetch('https://selfcheckin.opensoft.pt/reservations', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(this.lfStorage.getAsJSON()),
-        mode: "cors"
+        mode: 'cors',
       })
         .then(response => {
           console.log(response);
-          alert("Check-in successful. Enjoy your stay.");
+          alert('Check-in successful. Enjoy your stay.');
         })
         .catch(ex => {
           console.log(ex);
