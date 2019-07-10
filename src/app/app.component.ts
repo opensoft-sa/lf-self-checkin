@@ -17,7 +17,7 @@ export class AppComponent {
         const dateStr = new Date().toISOString().replace(/:|\./g, '-');
         const fileName = `census-${dateStr}.json`;
         try {
-          await this.lfStorage.saveToFile('/', fileName);
+          await this.lfFileStorage.saveToFile('/', fileName);
           console.log('Value saved successfully');
           this.lfStorage.setPristine('/');
         } catch (err) {
@@ -32,7 +32,7 @@ export class AppComponent {
       isDisabled: !this.lfFileStorage.loadIsSupported,
       callback: async () => {
         try {
-          await this.lfStorage.loadFromFile('/');
+          await this.lfFileStorage.loadFromFile('/');
           console.log('Value loaded successfully');
         } catch (err) {
           console.error('Error loading file:', err);
@@ -56,7 +56,7 @@ export class AppComponent {
     },
   ];
 
-  @ViewChild(LfAppComponent) private lfApp: LfAppComponent;
+  @ViewChild(LfAppComponent, {static: false}) private lfApp: LfAppComponent;
 
   constructor(
     public lfStorage: LfStorage,
@@ -72,7 +72,7 @@ export class AppComponent {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(this.lfStorage.getAsJSON()),
+        body: JSON.stringify(this.lfStorage.getAsJS()),
         mode: 'cors',
       })
         .then(response => {
