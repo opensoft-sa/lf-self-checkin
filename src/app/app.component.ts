@@ -42,7 +42,7 @@ export class AppComponent {
     },
   ];
 
-  @ViewChild(LfAppComponent) private lfApp: LfAppComponent;
+  @ViewChild(LfAppComponent, {static: false}) private lfApp: LfAppComponent;
 
   constructor(
     public lfStorage: LfStorage,
@@ -58,7 +58,7 @@ export class AppComponent {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(this.lfStorage.getAsJSON()),
+        body: JSON.stringify(this.lfStorage.getAsJS()),
         mode: 'cors',
       })
         .then(response => {
